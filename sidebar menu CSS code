@@ -1,0 +1,171 @@
+/*Photography-UI-sidebar-page css*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+}
+
+.back_img {
+  position: fixed; /* fits on whole screen */
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  overflow: hidden; /* to remove scroll bar in img */
+  z-index: -1; /* to display behind */
+}
+
+.back_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills img without cropping  */
+  object-position: top ; /*img will be positioned from top*/
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Icon layout */
+.toptwo_icon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Default icon display */
+.icon1 {
+  display: inline;
+}
+.icon2 {
+  display: none;
+}
+
+/* Toggle icons on check */
+#menu-toggle:checked + label .icon1 {
+  display: none;
+}
+#menu-toggle:checked + label .icon2 {
+  display: inline;
+}
+
+.icon1:hover,
+.icon2:hover {
+  font-size: 30px;
+  transition: all 0.15s ease-in;
+}
+
+/* Sidebar setup */
+.main_box {
+  background-color: rgba(169, 169, 169, 0.5);
+  border: 1px solid #555;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: -270px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Slide in when checked */
+#menu-toggle:checked ~ .main_box {
+  left: 0;
+}
+
+/* Menu heading */
+.menu_head {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.menu_head:hover {
+  border: 0.1px solid #756d6c;
+  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  background: #c0c0c0;
+}
+
+.menu_head a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Menu items */
+.sidebarmenu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebarmenu ul li {
+  padding: 3px 15px;
+}
+
+.sidebarmenu ul li:hover {
+  background: #eeeeee;
+  border: 2px solid #756d6c;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: 0.15s;
+  border-radius: 2px;
+}
+
+.sidebarmenu ul li a {
+  text-decoration: none;
+  color: black;
+  margin-left: 8px;
+}
+
+/* Social icons */
+/*.end_icons {
+  margin-top: 225px;
+  /*margin-top:60vh;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}*/
+
+.iconparentdiv {
+  position: relative; /* Make the parent relative */
+  min-height: 100vh;   /* Ensure it fills the screen */
+}
+
+.end_icons {
+  position: absolute;
+  bottom: 55px; /* Always 55px from bottom of parent */
+  left: 47%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content:center;
+  gap: 10px;
+}
+
+
+
+.end_icons i {
+  font-size: 24px;
+  opacity: 0.6;
+  transition: 0.2s;
+  justify-content:space-between;
+}
+
+
+.end_icons i:hover {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
