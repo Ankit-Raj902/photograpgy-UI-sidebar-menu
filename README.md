@@ -1,4 +1,3 @@
-# photograpgy-UI-sidebar-menu
 # photograpgy-UI-sidebar-menu 📸
 
 A clean and responsive **Sidebar UI** built using only **HTML & CSS** — with a photography-themed design and a toggle-based sidebar menu. Fully responsive for portrait and landscape modes.
